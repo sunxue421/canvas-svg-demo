@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:1px solid black;
+            background-image: url(./李钟硕.jpg);
+        }
+    
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width=500px height=385px></canvas>
+    <script src="./jquery.js"></script>
+<script>
+    var canvas=document.getElementById('myCanvas');
+    var ctx=canvas.getContext('2d');
+    ctx.fillRect(0,0,500,385);
+    $('canvas').click(function(e){
+        w=e.clientX-8;
+        h=e.clientY-8;
+        ctx.clearRect(w,h, 50, 50);
+    })
+    
+
+
+</script>
+</body>
+</html>
